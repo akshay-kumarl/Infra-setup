@@ -25,7 +25,7 @@ To run Jenkins java and Jenkins must be installed on the master machine and to r
 
 ```
 sudo apt update
-sudo apt install fontconfig openjdk-17-jre
+sudo apt install fontconfig openjdk-17-jre -y
 java -version
 ```
 
@@ -63,6 +63,9 @@ http://public-ip:8080/
 ```
 sudo cat /var/lib/jenkins/secrets/initialAdminPassword
 ```
+
+---
+
 	   
 ## Step-8 : Create Admin Account & Install Required Plugins in Jenkins
 
@@ -90,8 +93,14 @@ sudo yum install java -y
 NOTE: If having a problem with memory not sufficient then configure in setting from GB to MB  
 
 
----
 
+
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
 
 
 # Installing K8s on Jenkins server 
