@@ -2,6 +2,12 @@
 
 Install argoCD through ArgoCD Documentation 
 
+Doc: [DOCUMENTATION LINK](https://argo-cd.readthedocs.io/en/stable/?_gl=1*vb89rf*_ga*MTgyNjgzMTcxMy4xNzI5NjgwNjkw*_ga_5Z1VTPDL73*MTcyOTY4MDY4OS4xLjAuMTcyOTY4MDY5NC4wLjAuMA..)
+
+
+After installing follow below steps 
+
+
 #### A Simple way to access ArgoCD UI 
 
 ```
@@ -23,10 +29,10 @@ minikube service argocd-server -n argocd
 
 #### To extract the password  
 ```
-kubectl get secret -n argocd<br/>
+kubectl get secret -n argocd
 ```
 ```
-kubectl edit secret argocd-initial-admin-secret -n argocd<br/>
+kubectl edit secret argocd-initial-admin-secret -n argocd
 ```
 ```
 echo cVY2RTBPRElrVEtqZGdabA== | base64 --decode 
