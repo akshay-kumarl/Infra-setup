@@ -41,8 +41,18 @@ sudo usermod -aG docker ubuntu
 newgrp docker #this command is used to for norestart
 ```
 
+---
+
+### Docker latest version installation on ubuntu
+
+follow this link<br/>
+https://docs.docker.com/engine/install/ubuntu/
 
 
+but after following the link <br/>
+sudo service docker start <br/>
+sudo usermod -aG docker $USER <br/>
+newgrp docker 
 
 
 
