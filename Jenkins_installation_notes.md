@@ -66,7 +66,11 @@ http://public-ip:8080/
 sudo cat /var/lib/jenkins/secrets/initialAdminPassword
 ```
 
----
+
+for errors in ubuntu installation plz refer below link or chatgpt 
+
+[Ubuntu-Errors](https://github.com/akshay-kumarl/CI-CD/blob/mainbranch/Jenkins/Errors/jenkins_installation_errors.md)<br/>
+[Ubuntu-installation](https://github.com/akshay-kumarl/CI-CD/blob/mainbranch/Jenkins/ubuntu_os_install.md)
 
 	   
 ## Step-8 : Create Admin Account & Install Required Plugins in Jenkins
@@ -78,11 +82,15 @@ This OS isn't supported by Jenkins still if needed follow the below website
 
 https://medium.com/@rajkanchole1/how-to-install-jenkins-on-linux-b36682d7cdce
 
---------------------------------------------------
-JENKINS INSTALLATION (AMAZON LINUX / RHEL)
---------------------------------------------------
+===========================================<br/>
+JENKINS INSTALLATION (AMAZON LINUX / RHEL)<br/>
 
-mount -o remount,size=4G /tmp
+===========================================
+
+
+
+```
+mount -o remount,size=4G /tmp 
 sudo yum update –y
 sudo wget -O /etc/yum.repos.d/jenkins.repo \
     https://pkg.jenkins.io/rpm-stable/jenkins.repo		
@@ -93,7 +101,7 @@ sudo yum install jenkins -y
 sudo systemctl enable jenkins
 sudo systemctl start jenkins
 sudo systemctl status jenkins
-
+```
 
 ## SLAVE MACHINE IN UBUNTU
 
