@@ -1,19 +1,19 @@
 
-# Jenkins installation 
+# Jenkins installation
 
-<br/>
 
-### Setup Docker in Jenkins
+
+### Setup of Docker in Jenkins
 ```
 sudo usermod -aG docker jenkins
-systemctl restart jenkins   or restart the system
+systemctl restart jenkins or restart the system
 ```
 
 To run Jenkins java and Jenkins must be installed on the master machine and to run the slave machine java is enough 
 
 
 
-# Jenkins Server Setup in Linux VM (UBUNTU OS) #
+# Jenkins Server Setup in Linux VM (UBUNTU OS)
 
 ## Step - 1: Create Linux VM ##
 
@@ -74,8 +74,23 @@ sudo cat /var/lib/jenkins/secrets/initialAdminPassword
 
 This OS isn't supported by Jenkins still if needed follow the below website
 
-
 https://medium.com/@rajkanchole1/how-to-install-jenkins-on-linux-b36682d7cdce
+
+--------------------------------------------------
+JENKINS INSTALLATION (AMAZON LINUX / RHEL)
+--------------------------------------------------
+
+mount -o remount,size=4G /tmp
+sudo yum update –y
+sudo wget -O /etc/yum.repos.d/jenkins.repo \
+    https://pkg.jenkins.io/rpm-stable/jenkins.repo		
+sudo rpm --import https://pkg.jenkins.io/rpm-stable/jenkins.io-2026.key
+sudo yum upgrade -y
+sudo yum install java-21-amazon-corretto -y
+sudo yum install jenkins -y
+sudo systemctl enable jenkins
+sudo systemctl start jenkins
+sudo systemctl status jenkins
 
 
 ## SLAVE MACHINE IN UBUNTU
