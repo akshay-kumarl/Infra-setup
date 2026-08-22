@@ -118,3 +118,7 @@ sudo mv ./kubectl /usr/local/bin
 kubectl version --short --client
 
 ```
+
+
+For more updated 2026 installation of k8s repo please refer below link <br/>
+[Updated-k8s-infra-setup](https://github.com/akshay-kumarl/Kubernetes/tree/mainbranch/RealtimeInstallation)
