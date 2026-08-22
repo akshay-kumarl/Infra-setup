@@ -26,6 +26,8 @@ To run Jenkins java and Jenkins must be installed on the master machine and to r
 ```
 sudo apt update
 sudo apt install fontconfig openjdk-17-jre -y
+
+sudo apt install openjdk-25-jre-headless # for latest version of java
 java -version
 ```
 
