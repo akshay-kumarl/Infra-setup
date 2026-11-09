@@ -69,6 +69,9 @@ Jenkins requires a supported Java runtime.
 
 ```bash
 sudo apt install -y fontconfig openjdk-21-jre
+
+sudo apt install openjdk-25-jre-headless # for latest version of java
+java -version
 ```
 
 Verify the installation:
