@@ -174,7 +174,7 @@ Example configuration:
   Node OS          Ubuntu
   Identity         Managed identity
 
-Create the cluster:
+Create the cluster:{without publicip}
 
 ``` bash
 az aks create \
@@ -198,6 +198,37 @@ az aks show \
   --name aks-demo \
   --output table
 ```
+
+```
+to create a cluster with publicip with present resource group
+az aks create \
+  --resource-group rg-aks-demo \
+  --name aks-demo \
+  --location centralindia \
+  --node-count 2 \
+  --node-vm-size Standard_D2s_v5 \
+  --os-sku Ubuntu \
+  --zones 1 2 \
+  --enable-managed-identity \
+  --enable-node-public-ip \
+  --allowed-host-ports 30000 \
+  --generate-ssh-keys
+
+
+
+to add node to present cluster 
+az aks nodepool add \
+  --resource-group myresourcegrp \
+  --cluster-name aks-demo \
+  --name pubpool \
+  --node-count 2 \
+  --node-vm-size Standard_D2ls_v6 \
+  --os-sku Ubuntu \
+  --zones 1 2 \
+  --enable-node-public-ip \
+  --allowed-host-ports 31000/TCP
+```
+
 
 > **Cost note:** The AKS Free tier does not make worker VMs, disks,
 > networking, load balancers, or other Azure resources free. These can
